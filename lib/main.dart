@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tangen_flutter/core/di/dependency_injector.dart';
 import 'package:tangen_flutter/core/init/app_router.dart';
 
 void main() {
   injectionSetup();
-  runApp(const AppWidget());
+
+  runApp(
+    const ProviderScope(child: AppWidget()),
+  );
 }
 
 class AppWidget extends StatelessWidget {
