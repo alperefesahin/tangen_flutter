@@ -1,21 +1,23 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tangen_flutter/core/design_system/components/button/tangen_button.dart';
+import 'package:flutter/widgets.dart';
 import 'package:tangen_flutter/core/design_system/components/scaffold/tangen_scaffold.dart';
+import 'package:tangen_flutter/features/login/widgets/login_buttons_widget.dart';
+import 'package:tangen_flutter/features/login/widgets/welcome_widget.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return TangenScaffold(
+    return const TangenScaffold(
       body: Center(
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width / 4,
-              child: TangenButton(),
-            ),
-            TangenButton(),
+            SizedBox(height: 80),
+            WelcomeWidget(),
+            LoginButtonsWidget(),
           ],
         ),
       ),

@@ -9,10 +9,14 @@ class TangenScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: scaffoldBg,
-      appBar: appBar,
-      body: body,
+    return SafeArea(
+      bottom: false,
+      top: false,
+      child: Scaffold(
+        backgroundColor: scaffoldBg,
+        appBar: appBar,
+        body: body,
+      ),
     );
   }
 }
