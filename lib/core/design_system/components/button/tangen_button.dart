@@ -6,6 +6,7 @@ class TangenButton extends StatelessWidget {
   const TangenButton({
     super.key,
     required this.text,
+    required this.onPressed,
     this.backgroundColor = black,
     this.isContentWrapped = false,
     this.padding = EdgeInsets.zero,
@@ -21,6 +22,7 @@ class TangenButton extends StatelessWidget {
   final Color textColor;
   final bool hasButtonIcon;
   final IconData? icon;
+  final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class TangenButton extends StatelessWidget {
           ),
           alignment: Alignment.center,
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: hasButtonIcon
             ? Row(
                 mainAxisAlignment: MainAxisAlignment.center,
