@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:tangen_flutter/core/constants/enums.dart';
 import 'package:tangen_flutter/core/design_system/colors/colors.dart';
-import 'package:tangen_flutter/core/design_system/components/scaffold/tangen_scaffold.dart';
+import 'package:tangen_flutter/core/design_system/components/tangen_scaffold.dart';
 import 'package:tangen_flutter/features/dashboard/widgets/dashboard_view_body.dart';
 
 class DashboardView extends StatefulWidget {

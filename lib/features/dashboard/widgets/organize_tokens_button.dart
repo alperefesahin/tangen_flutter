@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:tangen_flutter/core/design_system/colors/colors.dart';
-import 'package:tangen_flutter/core/design_system/components/button/tangen_button.dart';
+import 'package:tangen_flutter/core/design_system/components/tangen_button.dart';
 
 class OrganizeTokensButton extends StatelessWidget {
   const OrganizeTokensButton({super.key});

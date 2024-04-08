@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tangen_flutter/core/design_system/colors/colors.dart';
-import 'package:tangen_flutter/core/design_system/components/button/tangen_button.dart';
+import 'package:tangen_flutter/core/design_system/components/tangen_button.dart';
 
 class ManageTokensButton extends StatelessWidget {
   const ManageTokensButton({super.key});
