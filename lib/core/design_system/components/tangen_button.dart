@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tangen_flutter/core/design_system/colors/colors.dart';
+import 'package:tangen_flutter/core/design_system/components/tangen_text.dart';
 
 class TangenButton extends StatelessWidget {
   const TangenButton({
@@ -51,7 +52,7 @@ class TangenButton extends StatelessWidget {
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      TangenButtonText(text: text, textStyle: buttonTextStlye),
+                      TangenText(text: text, textStyle: buttonTextStlye),
                       const SizedBox(width: 8),
                       Icon(icon, size: 18, color: iconColor),
                     ],
@@ -61,31 +62,11 @@ class TangenButton extends StatelessWidget {
                     children: [
                       Icon(icon, size: 18, color: iconColor),
                       const SizedBox(width: 8),
-                      TangenButtonText(text: text, textStyle: buttonTextStlye),
+                      TangenText(text: text, textStyle: buttonTextStlye),
                     ],
                   )
-            : TangenButtonText(text: text, textStyle: buttonTextStlye),
+            : TangenText(text: text, textStyle: buttonTextStlye),
       ),
-    );
-  }
-}
-
-class TangenButtonText extends StatelessWidget {
-  const TangenButtonText({
-    super.key,
-    required this.text,
-    required this.textStyle,
-  });
-
-  final String text;
-  final TextStyle textStyle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: textStyle,
-      textAlign: TextAlign.center,
     );
   }
 }

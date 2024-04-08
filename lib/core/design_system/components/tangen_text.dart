@@ -9,6 +9,10 @@ class TangenText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: GoogleFonts.openSans(textStyle: textStyle));
+    return Text(
+      text,
+      style: GoogleFonts.openSans(textStyle: textStyle),
+      textAlign: TextAlign.center,
+    );
   }
 }

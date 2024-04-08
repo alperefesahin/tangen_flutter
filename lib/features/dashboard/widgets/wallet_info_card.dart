@@ -13,7 +13,7 @@ class WalletInfoCard extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return TangenWhiteBox(
-      height: size.height / 6.5,
+      height: size.height / 7.5,
       widget: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

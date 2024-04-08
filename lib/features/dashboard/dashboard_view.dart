@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:tangen_flutter/core/constants/enums.dart';
 import 'package:tangen_flutter/core/design_system/colors/colors.dart';
 import 'package:tangen_flutter/core/design_system/components/tangen_scaffold.dart';
+import 'package:tangen_flutter/core/design_system/components/tangen_text.dart';
 import 'package:tangen_flutter/features/dashboard/widgets/dashboard_view_body.dart';
 
 class DashboardView extends StatefulWidget {
@@ -31,15 +31,13 @@ class _DashboardViewState extends State<DashboardView> {
             width: _isScrolledToTop ? 0 : 0.1,
           ),
         ),
-        title: Row(
+        title: const Row(
           children: [
-            const Icon(LucideIcons.walletCards, size: 20),
-            const SizedBox(width: 4),
-            Text(
-              'tangen',
-              style: GoogleFonts.openSans(
-                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: black),
-              ),
+            Icon(LucideIcons.walletCards, size: 20),
+            SizedBox(width: 4),
+            TangenText(
+              text: 'tangen',
+              textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: black),
             ),
           ],
         ),
@@ -57,7 +55,7 @@ class _DashboardViewState extends State<DashboardView> {
         onNotification: (notification) {
           if (notification is ScrollUpdateNotification) {
             setState(() {
-              _isScrolledToTop = notification.scrollDelta! < 0 && notification.metrics.pixels == 0;
+              _isScrolledToTop = notification.metrics.pixels == 0 || notification.metrics.pixels < 0;
             });
           }
           return true;

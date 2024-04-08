@@ -9,6 +9,7 @@ class WalletCoinsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return TangenWhiteBox(
       widget: ListView.builder(
+        padding: EdgeInsets.zero,
         itemCount: 20,
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),

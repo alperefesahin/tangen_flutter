@@ -12,15 +12,15 @@ class ManageTokensButton extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Colors.white.withOpacity(0.75),
+            color: white.withOpacity(0.75),
             blurRadius: 10,
             spreadRadius: 10,
-            offset: const Offset(4, 8), // Shadow position
+            offset: const Offset(4, 16), // Shadow position
           ),
         ],
       ),
       child: TangenButton(
-        padding: const EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.only(bottom: 24),
         text: "Manage tokens",
         onPressed: () {
           // Todo: implement manage tokens
