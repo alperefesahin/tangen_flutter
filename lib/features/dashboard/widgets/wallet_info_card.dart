@@ -5,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tangen_flutter/core/design_system/colors/colors.dart';
 import 'package:tangen_flutter/core/design_system/components/tangen_white_box.dart';
 
-class WalletInfo extends StatelessWidget {
-  const WalletInfo({super.key});
+class WalletInfoCard extends StatelessWidget {
+  const WalletInfoCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class WalletInfo extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                WalletInfoText(
+                WalletInfoCardText(
                   text: "Wallet",
                   textStyle: TextStyle(
                     fontSize: 14,
@@ -35,7 +35,7 @@ class WalletInfo extends StatelessWidget {
                 const Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    WalletInfoText(
+                    WalletInfoCardText(
                       text: "\$135,",
                       textStyle: TextStyle(
                         fontSize: 28,
@@ -45,7 +45,7 @@ class WalletInfo extends StatelessWidget {
                     ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 4),
-                      child: WalletInfoText(
+                      child: WalletInfoCardText(
                         text: "30",
                         textStyle: TextStyle(
                           fontSize: 20,
@@ -57,7 +57,7 @@ class WalletInfo extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 8),
-                WalletInfoText(
+                WalletInfoCardText(
                   text: "2 cards",
                   textStyle: TextStyle(
                     fontSize: 12,
@@ -82,8 +82,8 @@ class WalletInfo extends StatelessWidget {
   }
 }
 
-class WalletInfoText extends StatelessWidget {
-  const WalletInfoText({super.key, required this.text, required this.textStyle});
+class WalletInfoCardText extends StatelessWidget {
+  const WalletInfoCardText({super.key, required this.text, required this.textStyle});
 
   final String text;
   final TextStyle textStyle;

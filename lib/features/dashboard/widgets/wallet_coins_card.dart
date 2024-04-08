@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tangen_flutter/core/design_system/components/tangen_white_box.dart';
 
-class WalletCoins extends StatelessWidget {
-  const WalletCoins({super.key});
+class WalletCoinsCard extends StatelessWidget {
+  const WalletCoinsCard({super.key});
 
   @override
   Widget build(BuildContext context) {

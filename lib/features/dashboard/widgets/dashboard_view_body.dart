@@ -1,25 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:tangen_flutter/features/dashboard/widgets/organize_tokens.dart';
-import 'package:tangen_flutter/features/dashboard/widgets/wallet_coins.dart';
-import 'package:tangen_flutter/features/dashboard/widgets/wallet_info.dart';
+import 'package:tangen_flutter/core/design_system/colors/colors.dart';
+import 'package:tangen_flutter/core/design_system/components/button/tangen_button.dart';
+import 'package:tangen_flutter/features/dashboard/widgets/manage_tokens_button.dart';
+import 'package:tangen_flutter/features/dashboard/widgets/organize_tokens_button.dart';
+import 'package:tangen_flutter/features/dashboard/widgets/wallet_coins_card.dart';
+import 'package:tangen_flutter/features/dashboard/widgets/wallet_info_card.dart';
 
 class DashboardViewBody extends StatelessWidget {
   const DashboardViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.only(top: 8),
-        child: Column(
-          children: [
-            WalletInfo(),
-            SizedBox(height: 16),
-            WalletCoins(),
-            OrganizeTokens(),
-          ],
+    return const Stack(
+      alignment: Alignment.bottomCenter,
+      children: [
+        SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.only(top: 8),
+            child: Column(
+              children: [
+                WalletInfoCard(),
+                SizedBox(height: 16),
+                WalletCoinsCard(),
+                OrganizeTokensButton(),
+              ],
+            ),
+          ),
         ),
-      ),
+        ManageTokensButton(),
+      ],
     );
   }
 }
