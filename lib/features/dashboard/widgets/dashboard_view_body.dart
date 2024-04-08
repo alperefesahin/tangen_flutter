@@ -13,6 +13,7 @@ class DashboardViewBody extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       children: [
         SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Padding(
             padding: EdgeInsets.only(top: 8),
             child: Column(
