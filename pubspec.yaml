@@ -35,6 +35,7 @@ dependencies:
   get_it: ^7.6.8
   lucide_icons: ^0.257.0
   google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10+1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -55,6 +56,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

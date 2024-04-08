@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tangen_flutter/core/design_system/components/scaffold/tangen_scaffold.dart';
+import 'package:tangen_flutter/core/design_system/components/tangen_scaffold.dart';
 
 class DetailsView extends StatelessWidget {
   const DetailsView({super.key});
