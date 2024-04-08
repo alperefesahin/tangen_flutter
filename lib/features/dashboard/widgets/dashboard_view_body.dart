@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tangen_flutter/core/design_system/colors/colors.dart';
-import 'package:tangen_flutter/core/design_system/components/button/tangen_button.dart';
 import 'package:tangen_flutter/features/dashboard/widgets/manage_tokens_button.dart';
 import 'package:tangen_flutter/features/dashboard/widgets/organize_tokens_button.dart';
 import 'package:tangen_flutter/features/dashboard/widgets/wallet_coins_card.dart';
