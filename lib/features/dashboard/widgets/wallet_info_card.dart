@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:tangen_flutter/core/design_system/colors/colors.dart';
+import 'package:tangen_flutter/core/design_system/components/tangen_text.dart';
 import 'package:tangen_flutter/core/design_system/components/tangen_white_box.dart';
 
 class WalletInfoCard extends StatelessWidget {
@@ -23,47 +23,31 @@ class WalletInfoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                WalletInfoCardText(
+                TangenText(
                   text: "Wallet",
-                  textStyle: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                    color: greyText.withOpacity(0.75),
-                  ),
+                  textStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: greyText.withOpacity(0.75)),
                 ),
                 const SizedBox(height: 8),
                 const Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    WalletInfoCardText(
+                    TangenText(
                       text: "\$135,",
-                      textStyle: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w700,
-                        color: black,
-                      ),
+                      textStyle: TextStyle(fontSize: 26, fontWeight: FontWeight.w700, color: black),
                     ),
                     Padding(
                       padding: EdgeInsets.only(bottom: 4),
-                      child: WalletInfoCardText(
+                      child: TangenText(
                         text: "30",
-                        textStyle: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                          color: black,
-                        ),
+                        textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: black),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 8),
-                WalletInfoCardText(
+                TangenText(
                   text: "2 cards",
-                  textStyle: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    color: greyText.withOpacity(0.75),
-                  ),
+                  textStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: greyText.withOpacity(0.75)),
                 ),
               ],
             ),
@@ -71,28 +55,10 @@ class WalletInfoCard extends StatelessWidget {
           Container(
             margin: const EdgeInsets.all(8),
             width: size.width / 4,
-            child: SvgPicture.asset(
-              'assets/tangem.svg',
-              fit: BoxFit.fill,
-            ),
+            child: SvgPicture.asset('assets/tangem.svg', fit: BoxFit.fill),
           ),
         ],
       ),
-    );
-  }
-}
-
-class WalletInfoCardText extends StatelessWidget {
-  const WalletInfoCardText({super.key, required this.text, required this.textStyle});
-
-  final String text;
-  final TextStyle textStyle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: GoogleFonts.openSans(textStyle: textStyle),
     );
   }
 }

@@ -12,6 +12,7 @@ class TangenButton extends StatelessWidget {
     this.textColor = black,
     this.hasButtonIcon = false,
     this.isIconAtRight = true,
+    this.minimumSize = const Size.fromHeight(44),
     this.icon,
     this.iconColor,
   });
@@ -25,6 +26,7 @@ class TangenButton extends StatelessWidget {
   final bool isIconAtRight;
   final IconData? icon;
   final Function() onPressed;
+  final Size minimumSize;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class TangenButton extends StatelessWidget {
       padding: padding,
       child: FilledButton(
         style: OutlinedButton.styleFrom(
-          minimumSize: const Size.fromHeight(44),
+          minimumSize: minimumSize,
           backgroundColor: backgroundColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -49,10 +51,7 @@ class TangenButton extends StatelessWidget {
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      TangenButtonText(
-                        text: text,
-                        textStyle: buttonTextStlye,
-                      ),
+                      TangenButtonText(text: text, textStyle: buttonTextStlye),
                       const SizedBox(width: 8),
                       Icon(icon, size: 18, color: iconColor),
                     ],
@@ -62,16 +61,10 @@ class TangenButton extends StatelessWidget {
                     children: [
                       Icon(icon, size: 18, color: iconColor),
                       const SizedBox(width: 8),
-                      TangenButtonText(
-                        text: text,
-                        textStyle: buttonTextStlye,
-                      ),
+                      TangenButtonText(text: text, textStyle: buttonTextStlye),
                     ],
                   )
-            : TangenButtonText(
-                text: text,
-                textStyle: buttonTextStlye,
-              ),
+            : TangenButtonText(text: text, textStyle: buttonTextStlye),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tangen_flutter/core/design_system/components/tangen_white_box.dart';
+import 'package:tangen_flutter/features/dashboard/widgets/wallet_coins_widget.dart';
 
 class WalletCoinsCard extends StatelessWidget {
   const WalletCoinsCard({super.key});
@@ -12,9 +13,7 @@ class WalletCoinsCard extends StatelessWidget {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text('Item $index'),
-          );
+          return const WalletCoinsWidget();
         },
       ),
     );

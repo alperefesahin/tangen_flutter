@@ -21,6 +21,7 @@ class _DashboardViewState extends State<DashboardView> {
   Widget build(BuildContext context) {
     return TangenScaffold(
       appBar: AppBar(
+        toolbarHeight: 45,
         backgroundColor: transparent,
         scrolledUnderElevation: _isScrolledToTop ? 0 : 0.2,
         elevation: _isScrolledToTop ? 0 : 0.2,
@@ -32,16 +33,12 @@ class _DashboardViewState extends State<DashboardView> {
         ),
         title: Row(
           children: [
-            const Icon(LucideIcons.walletCards),
-            const SizedBox(width: 8),
+            const Icon(LucideIcons.walletCards, size: 20),
+            const SizedBox(width: 4),
             Text(
               'tangen',
               style: GoogleFonts.openSans(
-                textStyle: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: black,
-                ),
+                textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: black),
               ),
             ),
           ],
