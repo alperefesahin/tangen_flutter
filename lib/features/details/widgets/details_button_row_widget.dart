@@ -45,46 +45,50 @@ class DetailsButtonRowWidget extends StatelessWidget {
       );
     } else {
       return TangenWhiteBox(
-        widget: Column(
-          children: [
-            for (int index = 0; index < textList.length; index++)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: TangenText(
-                          text: textList[index],
-                          textStyle: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
+        widget: Padding(
+          padding: const EdgeInsets.only(top: 8, bottom: 8, left: 8),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              for (int index = 0; index < textList.length; index++)
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(4),
+                          child: TangenText(
+                            text: textList[index],
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 12),
-                        child: Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          size: 14,
-                          color: greyText.withOpacity(0.75),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 12),
+                          child: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            size: 14,
+                            color: greyText.withOpacity(0.75),
+                          ),
+                        ),
+                      ],
+                    ),
+                    if (index != textList.length - 1)
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 12),
+                        child: Divider(
+                          thickness: 0.5,
+                          color: buttonBgGrey,
                         ),
                       ),
-                    ],
-                  ),
-                  if (index != textList.length - 1)
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 12),
-                      child: Divider(
-                        thickness: 0.5,
-                        color: buttonBgGrey,
-                      ),
-                    ),
-                ],
-              ),
-          ],
+                  ],
+                ),
+            ],
+          ),
         ),
       );
     }

@@ -44,7 +44,7 @@ class _DetailsViewState extends State<DetailsView> {
                 SizedBox(width: 4),
                 TangenText(
                   text: 'Back',
-                  textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: black),
+                  textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: black),
                 ),
               ],
             ),
